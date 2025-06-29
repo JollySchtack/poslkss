@@ -2847,16 +2847,16 @@ footer {
 }
 
 .express-avail-mini{
-  text-align: left;
+  text-align: right;
   display: flex;
   flex-direction: row;
   color: red;
   font-size: 12px;
   position: absolute;
-  top: 250px;
-  left: 20px;
+  top: 190px;
+  right: 40px;
   margin-left: 10px;
-} 
+}  
 
 
 #express-from-modal{
