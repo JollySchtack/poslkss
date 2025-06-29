@@ -2846,6 +2846,18 @@ footer {
   margin-left: 10px;
 }
 
+.express-avail-mini{
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  top: 250px;
+  left: 20px;
+  margin-left: 10px;
+} 
+
 
 #express-from-modal{
   margin-top: 150px; 
