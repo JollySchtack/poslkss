@@ -2852,7 +2852,7 @@ footer {
   text-align: right;
   display: flex;
   flex-direction: row;
-  color: grey;
+  color: red;
   font-size: 12px;
   position: absolute;
   top: 180px;
@@ -2890,7 +2890,6 @@ footer {
     margin-right: 0.5rem;
     padding-top: 6.5px;
     padding-left: 6.5px;
-    border-radius: 20px;
 }
 
 .express-to-icon {
@@ -2899,7 +2898,6 @@ footer {
     margin-right: 0.5rem;
     padding-top: 6.5px;
     padding-left: 6.5px;
-    border-radius: 20px;
 }
 
 #express-from-list{
@@ -2983,7 +2981,6 @@ footer {
   margin-left: 8%;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 50px;
 }
 
 .not-icon-b{
@@ -2991,7 +2988,7 @@ footer {
   margin-left: 45%;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 50px;
+  
 }
    
 .not-arrow-icon{
