@@ -2890,6 +2890,7 @@ footer {
     margin-right: 0.5rem;
     padding-top: 6.5px;
     padding-left: 6.5px;
+    border-radius: 20px;
 }
 
 .express-to-icon {
@@ -2898,6 +2899,7 @@ footer {
     margin-right: 0.5rem;
     padding-top: 6.5px;
     padding-left: 6.5px;
+    border-radius: 20px;
 }
 
 #express-from-list{
@@ -2981,6 +2983,7 @@ footer {
   margin-left: 8%;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 50px;
 }
 
 .not-icon-b{
@@ -2988,7 +2991,7 @@ footer {
   margin-left: 45%;
   margin-top: 10px;
   margin-bottom: 10px;
-  
+  border-radius: 50px;
 }
    
 .not-arrow-icon{
