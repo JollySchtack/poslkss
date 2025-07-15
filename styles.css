@@ -2852,7 +2852,7 @@ footer {
   text-align: right;
   display: flex;
   flex-direction: row;
-  color: red;
+  color: grey;
   font-size: 12px;
   position: absolute;
   top: 180px;
