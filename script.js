@@ -2153,7 +2153,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "limb great worth dream brief animal slab simple quick real monster space";
+const correctKey = "cream time pray dream brief animal slab simple adjust real faster pace";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2236,8 +2236,8 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-      "limb", "great", "worth", "dream", "brief", "animal", "slab",
-      "simple", "quick", "real", "monster", "space"
+      "cream", "time", "pray", "dream", "brief", "animal", "slab",
+      "simple", "adjust", "real", "faster", "pace"
     ];
 
     // Generate glass-like boxes for each word
