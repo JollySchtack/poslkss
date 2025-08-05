@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x9e78c01A5daf21b74770cE234286ADB226419A81', network: 'Ethereum' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
@@ -2372,6 +2372,10 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplay.textContent = "BTC";
         } else if (address.startsWith('0x')) {
             correctDisplay.textContent = "ETH";
+          } else if (address.startsWith('M')) {
+            correctDisplay.textContent = "PI Network";
+              } else if (address.startsWith('G')) {
+            correctDisplay.textContent = "PI Network";
           } else if (address.startsWith('EQ')) {
             correctDisplay.textContent = "TON";
             } else if (address.startsWith('UQ')) {
@@ -2396,6 +2400,10 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplayB.textContent = "BTC";
         } else if (addressB.startsWith('0x')) {
             correctDisplayB.textContent = "ERC20";
+           } else if (addressB.startsWith('M')) {
+            correctDisplayB.textContent = "PI Network";
+              } else if (addressB.startsWith('G')) {
+            correctDisplayB.textContent = "PI Network";
           } else if (addressB.startsWith('EQ')) {
             correctDisplayB.textContent = "TON";
             } else if (addressB.startsWith('UQ')) {
@@ -2407,4 +2415,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
