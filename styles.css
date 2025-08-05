@@ -237,6 +237,15 @@ textarea.invalid {
   left: 2.5%;
   top: 3.5%;
   cursor: pointer;
+  width: 20px;
+}
+
+#out-button img{
+  position: absolute;
+  left: 2.5%;
+  top: 3.5%;
+  cursor: pointer;
+  width: 24px;
 }
 
 #out-button-two{
@@ -244,6 +253,14 @@ textarea.invalid {
   left: 2.5%;
   top: 3.5%;
   cursor: pointer;
+}
+
+#out-button-two img{
+  position: absolute;
+  left: 2.5%;
+  top: 3.5%;
+  cursor: pointer;
+  width: 24px;
 }
 
 
@@ -441,6 +458,14 @@ body {
   'opsz' 24
 }
 
+.material-symbols-outlined img{
+  width: 24px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
 
 .wallet {
   background-color: #181A20;
