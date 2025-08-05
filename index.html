@@ -229,9 +229,9 @@ setInterval(fetchBNBPrice, 120000);
       
       async function fetchEthereumPrice() {
             try {
-                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=usd');
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=wrapped-steth&vs_currencies=usd');
                 const data = await response.json();
-                const redETH = data['pax-gold'].usd;
+                const redETH = data['wrapped-steth'].usd;
                 document.getElementById('red-ETH').innerText = `$${redETH}`;
             } catch (error) {
                 document.getElementById('red-ETH').innerText = 'Loading...';
@@ -249,12 +249,12 @@ setInterval(fetchBNBPrice, 120000);
       <div class="spot-trading-row"> 
         <div class="spot-trading-box">
         Earn FDUSD APR
-        up to 16.20%
+        up to 18.20%
         </div>
         
        <div class="spot-trading-box"> 
         Earn BTC/FDUSD APR
-        up to 25%
+        up to 28%
         </div>
       </div>
         
@@ -1161,3 +1161,4 @@ setInterval(fetchPiPrice, 120000);
     
 </body>
 </html>
+
