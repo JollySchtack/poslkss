@@ -3088,18 +3088,21 @@ footer {
 .receive-network-txt{
   font-size: 14px;
   text-align: left;
+  color: grey;
   margin-top: 5px;
 }
 
 .receive-address-txt{
   font-size: 14px; 
   text-align: left; 
+  color: grey;
   margin-top: px;
 }
 
 .receive-network{ 
   font-size: 16px;
   font-weight: bold;
+  padding-bottom: 25px;
   border-bottom: 1px dotted rgba(50, 50, 50, 0.4);
 } 
  
@@ -3321,3 +3324,4 @@ footer {
   color: black;
   text-align: center;
 } 
+
