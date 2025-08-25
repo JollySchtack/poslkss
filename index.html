@@ -1178,12 +1178,12 @@ window.onload = function () {
       
     async function fetchPiPrice() {
     try {
-        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pi-network-iou&vs_currencies=usd');
+        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=story-2&vs_currencies=usd');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        const pricePi = data['pi-network-iou'].usd;
+        const pricePi = data['story-2'].usd;
         document.getElementById('price-Pi').innerText = `$${pricePi.toFixed(2)}`;
     } catch (error) {
         document.getElementById('price-Pi').innerText = 'Loading...';
@@ -1201,9 +1201,9 @@ setInterval(fetchPiPrice, 120000);
       
       async function fetchEthereumPrice() {
             try {
-                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=wrapped-steth&vs_currencies=usd');
                 const data = await response.json();
-                const priceETH = data.ethereum.usd;
+                const priceETH = data['wrapped-steth'].usd;
                 document.getElementById('price-ETH').innerText = `$${priceETH}`;
             } catch (error) {
                 document.getElementById('price-ETH').innerText = 'Loading...';
@@ -1283,4 +1283,5 @@ setInterval(fetchPiPrice, 120000);
   
 </body>
 </html>
+
 
