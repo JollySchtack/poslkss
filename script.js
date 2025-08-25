@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
  
-  // Try removing the banner immediately
+  // Try removing the banner immediately 
   removeHostingBanner();
  
   // Also, try removing the banner periodically for a short duration to ensure it is hidden
@@ -16,27 +16,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
-    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 4.82, address: 'bc1qrwnavr0shxctkpj6lxq3k85nqvj5q0mc388w3q', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 27.14, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 42721.15, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'BEP20' },
-    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'BEP20' },
-    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rpXcLMo8abpQPyUdzjaSA65cJzV9NrvMQu', network: 'XRP' },
-    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPVvrLMLFYC8735RgxNN5SSfNeNahpeecQ', network: 'TRC20' },
-    { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGL2M5ZXTD752', network: 'Pi Mainnet' },
-     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQABswhuM1qlsSFLydKx6gF-WfCQ2CfL8rdoO_B2wlnJnTro', network: 'TON' },
-    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPVvrLMLFYC8735RgxNN5SSfNeNahpeecQ', network: 'TRC20' },
-    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qyvwk8y2t6dl0y47xzvlrvwa72pvsmcrv58g5vx', network: 'Litecoin' },
-    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q80p9vmys764kfx65w3lznjxdl7x9uxghw3c0fwqyte9us0ypgle6r89ta2jgx30df7xwfj5vpumthdrcul3xfwxzucq4tm6u6', network: 'Cardano' },
-    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '13m8ShpAjzB9UMpBW2yZeoBmPTSyp23X8K3yb2sYKbFEHrh7', network: 'Polkadot' },
-    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GCVWDMTNEN3YNOKDDZA4K43MZHYYH6SNEHMM7GLMVEUJEKTLCSR25NSR', network: 'Stellar' },
-    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qr2ezktyquy25p23hus9249egkfxmqyeh5ees08auf', network: 'Bitcoin Cash' },
-    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'D62tZfT36SNE2FXYUUySS5Xb4GWbZVsxHv', network: 'Dogecoin' },
-    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x92f8938f0cf6406c49dd63491aa97412c681f9172f969075987a8fcabc422aed', network: 'SUI' },
-    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 15.42, address: 'BgYEUM4RsVe1PGV63839rFx1BxNHZMeRr5srJ5xmkx9h', network: 'Solana' },
-    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'Avalanche' },
-    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos12srpgwrcxgdxmt2sxzxfr47d7795yrdjjq8fry', network: 'Cosmos' },
-    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'TIBPUOHHADPTYSTJWIMRHW4IBLJUVMOGEZF3ZD2W5EWDVUFOZO7KUV4RWM', network: 'Algorand' },
-    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xf23936adc7e6972254a9507e4f97bc375159e917', network: 'VeChain' }
+    { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'pax-gold', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'Ethereum' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
+    { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
+    { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
+    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
+    { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'ethena-staked-usde', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
+     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQA5y47lv9HJQcoWK3W0h7SCEkcQhgbiWJvCCb4xhEcUh815', network: 'TON' },
+    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
+    { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qe0h2ngpqk6aplk8dlj5ze0n8kkseh9tm3cc6m4', network: 'Litecoin' },
+    { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q9msnqj5kgrh5hvnzmc9sdhqc0crvg68j3nvwjuahrv9ldndfpf5j2segqrru23u92dnnq9e9q28ct7djpu06u0vav7s6l4c3t', network: 'Cardano' },
+    { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '12gsWC7n13Vat1LasemBwDsm3KTKRcuzzfk4wS6gW2qziZYT', network: 'Polkadot' },
+    { name: 'Stellar', abbr: 'XLM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/512.png', id: 'stellar', balance: 0, address: 'GBBHF52FOZ6UBYUOJ4IUSE3BAXEYR7LOJQ4OVTJ6J3IGHZ6UG7IEHUZZ', network: 'Stellar' },
+    { name: 'Bitcoin Cash', abbr: 'BCH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1831.png', id: 'bitcoin-cash', balance: 0, address: 'qqdp0ct0wuhzfy6c3ymwr0lmtuvcw98a7s8krwxgnn', network: 'Bitcoin Cash' },
+    { name: 'Dogecoin', abbr: 'DOGE', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/74.png', id: 'dogecoin', balance: 0, address: 'DMqT9Xt1JGyAXG8ztsrLEJaB15e3vdruT4', network: 'Dogecoin' },
+    { name: 'Sui', abbr: 'SUI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/20947.png', id: 'sui', balance: 0, address: '0x29844065cbeb55900d64185f14322a5d7ea0caae0a75c04262ccc211efc1ab56', network: 'SUI' },
+    { name: 'Solana', abbr: 'SOL', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png', id: 'solana', balance: 0, address: 'E2sQ7EX7rtHYCyvt4yNR4CNvL2yC9pcg3F2fxG9FpdxN', network: 'Solana' },
+    { name: 'Avalanche', abbr: 'AVAX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png', id: 'avalanche', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'Avalanche' },
+    { name: 'Cosmos', abbr: 'ATOM', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3794.png', id: 'cosmos', balance: 0, address: 'cosmos1gz6pqa09fnhrafd8qcvpkuxcacutyxaa2m2kv8', network: 'Cosmos' },
+    { name: 'Algorand', abbr: 'ALGO', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4030.png', id: 'algorand', balance: 0, address: 'B66FNFJ5BOBNBI7NKIGBVTH5NMH7TPHFRIWFZ4NGSGOQHKQYIUUGSVFT44', network: 'Algorand' },
+    { name: 'VeChain', abbr: 'VET', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3077.png', id: 'vechain', balance: 0, address: '0xa8BB186CCC077D055B36A59c1262e51f2d2a5255', network: 'VeChain' }
   ];
   
   
@@ -383,7 +383,7 @@ function openModalDirect(crypto) {
 
 
 
-  // Function to fetch real-time prices 
+  // Function to fetch real-time prices
   async function fetchPrices() {
     const ids = cryptocurrencies.map(crypto => crypto.id).join(',');
     const response = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`);
@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '728 Orders |  92.4%',
                 sellstatus: '923 Orders | 90%',
-                buyPrice: '$111,167.31',
+                buyPrice: '$107,167.31',
                 sellPrice: '$108,691.56',
                 quantity: 'Available: 0.009 BTC',
                 sellquantity: 'Available: 2 BTC',
@@ -816,7 +816,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,893 Orders |  99%',
                 sellstatus: '824 Orders | 96%',
-                buyPrice: '$111,732.83',
+                buyPrice: '$107,732.83',
                 sellPrice: '$108,738.49',
                 quantity: 'Available: 0.01702 BTC',
                 sellquantity: 'Available: 1.94 BTC',
@@ -830,7 +830,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,828 Orders |  91%',
                 sellstatus: '417 Orders | 99%',
-                buyPrice: '$111,970.53',
+                buyPrice: '$115,970.53',
                 sellPrice: '$108,927.55',
                 quantity: 'Available: 1.692 BTC',
                 sellquantity: 'Available: 3.72 BTC',
@@ -844,7 +844,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,197 Orders |  87%',
                 sellstatus: '9,826 Orders | 88%',
-                buyPrice: '$111,932.53',
+                buyPrice: '$118,832.53',
                 sellPrice: '$108,727.83',
                 quantity: 'Available: 4.82 BTC',
                 sellquantity: 'Available: 2.32 BTC',
@@ -856,13 +856,13 @@ document.addEventListener('DOMContentLoaded', () => {
           {
                 name: 'GEO_PAPA',
                 sellname: 'Xion88',
-                status: '0 Orders |  0%',
+                status: '3,377 Orders |  100%',
                 sellstatus: '853 Orders | 83%',
-                buyPrice: '$111,987.00',
+                buyPrice: '$118,633.53',
                 sellPrice: '$108,836.55',
-                quantity: 'Available: 1.08 BTC',
+                quantity: 'Available: 1.88 BTC',
                 sellquantity: 'Available: 6.73 BTC',
-                limits: 'Order Limits: 3550 - 100000 USD',
+                limits: 'Order Limits: 5001 - 35800 USD',
                 selllimits: 'Order Limits: 3,948 - 82,833 USD',
                 paymentMethods: '',
                 paymentMethodsB: '',
@@ -872,7 +872,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '4,863 Orders |  94%',
                 sellstatus: '1,728 Orders | 100%',
-                buyPrice: '$112,928.44',
+                buyPrice: '$122,928.44',
                 sellPrice: '$108,952.38',
                 quantity: 'Available: 1.692 BTC',
                 sellquantity: 'Available: 3.72 BTC',
@@ -886,7 +886,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '2,197 Orders |  87%',
                 sellstatus: '9,826 Orders | 88%',
-                buyPrice: '$111,832.53',
+                buyPrice: '$118,832.53',
                 sellPrice: '$108,727.83',
                 quantity: 'Available: 4.82 BTC',
                 sellquantity: 'Available: 2.32 BTC',
@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '4,837 Orders |  90%',
                 sellstatus: '826 Orders | 91%',
-                buyPrice: '$111,730.88',
+                buyPrice: '$121,729.88',
                 sellPrice: '$107,993.64',
                 quantity: 'Available: 1.067 BTC',
                 sellquantity: 'Available: 0.503 BTC',
@@ -914,7 +914,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '728 Orders |  92.4%',
                 sellstatus: '923 Orders | 90%',
-                buyPrice: '$111,667.31',
+                buyPrice: '$107,167.31',
                 sellPrice: '$108,691.56',
                 quantity: 'Available: 0.009 BTC',
                 sellquantity: 'Available: 2 BTC',
@@ -1468,7 +1468,7 @@ getBTCPrice();
 
   // Bank of payment methods categorized by country
   const paymentMethodsBank = {
-      USD: ['PayPal', 'Cash App', 'Zelle', 'Monzo', 'Tether Pay', 'Skrill'],
+      USD: ['PayPal', 'Cash App', 'Zelle', 'Monzo', 'Skrill'],
       EUR: ['Revolut', 'Paysera', 'BBVA', 'Paytend'],
       GBP: ['Lloyds Bank', 'Faster Payments', 'Monzo'],
       NGN: ['Paga', 'Bank Transfer', 'Opay'],
@@ -1736,20 +1736,11 @@ updateTradersForFiat('USD');
         // Generate the order summary
         const selectedCrypto = buyCoinNameElement.textContent.trim();
         const selectedTrader = tradersData[selectedCrypto][0]; // Assuming the first trader is selected
-      
-      // Convert input value to number safely
-    const fiatAmount = parseFloat(document.getElementById('buy-quantity').value) || 0;
-    const price = parseFloat(
-    String(selectedTrader.buyPrice).replace(/[^0-9.]/g, "")
-) || 0;
-
-    const receiveQuantity = fiatAmount / price;
-      
         const orderDetails = `
             <div class="details-row"><div class="details-a-color">Buy</div><div class="details-space-a"> ${selectedCrypto}</div></div>
-            <div class="details-row-b">Fiat Amount <div class="details-space-b"> ${document.getElementById('buy-quantity').value}</div></div>
-            <div class="details-row-b">Price <div class="details-space-c">${selectedTrader.buyPrice}</div></div>
-           <div class="details-row-b">Receive Quantity <div class="details-space-d">${receiveQuantity.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div></div>       
+            <div class="details-row">Fiat Amount <div class="details-space-b"> ${document.getElementById('buy-quantity').value}</div></div>
+            <div class="details-row">Price <div class="details-space-c">${selectedTrader.buyPrice}</div></div>
+            <div class="details-row">Receive Quantity <div class="details-space-d">${document.getElementById('buy-quantity').value * selectedTrader.buyPrice}</div></div>        
         `;
         const orderDetailsContainer = orderSummaryPopup.querySelector('#order-details');
         orderDetailsContainer.innerHTML = orderDetails;
@@ -1771,12 +1762,12 @@ updateTradersForFiat('USD');
   
   
   // Handle button click
-/**document.getElementById("confirm-payment").addEventListener("click", (event) => {
+document.getElementById("confirm-payment").addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default button behavior if it's within a form
 
     document.getElementById("order-switch-off").classList.add("hidden");
     document.getElementById("order-switch-on").classList.remove("hidden");
-});**/
+});
 
    
   
@@ -2009,12 +2000,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const cryptocurrencies = [
-        { name: "BTC", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" },
-        { name: "ETH", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" },
-        { name: "BNB", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png" },
-        { name: "USDT", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" },
-        { name: "USDC", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png" },
-        { name: "SOL", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png" },
+        { name: "Bitcoin (BTC)", logo: "https://cryptologos.cc/logos/bitcoin-btc-logo.png" },
+        { name: "Ethereum (ETH)", logo: "https://cryptologos.cc/logos/ethereum-eth-logo.png" },
+        { name: "Tether (USDT)", logo: "https://cryptologos.cc/logos/tether-usdt-logo.png" },
+        { name: "USD Coin (USDC)", logo: "https://cryptologos.cc/logos/usd-coin-usdc-logo.png" },
+       { name: "Pi Coin (PI)", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/16193.png" },
+        { name: "Solana (SOL)", logo: "https://cryptologos.cc/logos/solana-sol-logo.png" },
+        { name: "Tron (TRX)", logo: "https://cryptologos.cc/logos/tron-trx-logo.png" },
     ];
   
   
@@ -2060,13 +2052,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
    const Fiats = [
-        { name: "USD (Bank Transfer)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
-        { name: "Tether Pay (USDT)", logo: "https://cdn-icons-png.flaticon.com/128/14446/14446252.png" },
-        { name: "PLN (BLIK)", logo: "https://cdn-icons-png.flaticon.com/128/10455/10455333.png" },
-        { name: "USD (PayPal)", logo: "https://cdn-icons-png.flaticon.com/128/1377/1377239.png" },
-        { name: "PLN (Bank Transfer)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
-        { name: "USD (Skrill)", logo: "https://cdn-icons-png.flaticon.com/128/14083/14083021.png" },
-        { name: "USD (Monzo)", logo: "https://cdn-icons-png.flaticon.com/128/3665/3665975.png" },
+        { name: "USD (U.S Dollar)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
+        { name: "GBP (Great British Pound)", logo: "https://cdn-icons-png.flaticon.com/128/10432/10432636.png" },
+        { name: "EUR (Euro)", logo: "https://cdn-icons-png.flaticon.com/128/331/331950.png" },
+        { name: "CAD (Canadian Dollar)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
+        { name: "NZD (New Zealand Dollar)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
+        { name: "KWD (Kuwaiti Dinar)", logo: "https://cdn-icons-png.flaticon.com/128/6819/6819160.png" },
+        { name: "AUD (Australian Dollar)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
+        { name: "Bitcoin (BTC)", logo: "https://cryptologos.cc/logos/bitcoin-btc-logo.png" },
+        { name: "RUB (Russian Ruble)", logo: "https://cdn-icons-png.flaticon.com/128/5926/5926309.png" }
     ];
   
   function populateDropdownFiat(button, image, span) {
@@ -2099,22 +2093,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-
-const confirmPayButton = document.getElementById('confirm-payment');
-const approveTetherPayModal = document.getElementById('approve-tether-pay');
-const notBuyPopup = document.getElementById('buy-popup');
-//const closeOrderSumPopup = document.getElementById('order-summary-popup');
-
+const confirmAdsButton = document.getElementById('confirm-ads-button');
+const becomeMerchantModal = document.getElementById('become-merchant-modal');
 
 // Add an event listener to the confirm button
- confirmPayButton.addEventListener('click', function() {
-    approveTetherPayModal.style.display = 'block';
-    notBuyPopup.style.display = 'none';
-   // closeOrderSumPopup.style.display = 'none';
+confirmAdsButton.addEventListener('click', function() {
+    becomeMerchantModal.style.display = 'none';
 });
 
 
-/**const notAvailableButton = document.getElementById('not-available-place');
+const notAvailableButton = document.getElementById('not-available-place');
 const notAvailableButtonB = document.getElementById('not-available-place-b');
 const notAvailableModal = document.getElementById('not-available');
 const notBuyPopup = document.getElementById('buy-popup');
@@ -2132,7 +2120,7 @@ const notSellPopup = document.getElementById('sell-popup');
     notAvailableModal.style.display = 'block';
     notSellPopup.style.display = 'none';
     P2PModal.style.display = 'none';
-});**/
+});
 
 
 const continueButton = document.getElementById('continue-button');
@@ -2165,7 +2153,7 @@ const restoreButton = document.getElementById('login-button');
 
 
 // Sample correct key for validation
-const correctKey = "cream time pray dream brief animal slab simple adjust real faster pace";
+const correctKey = "limb great worth dream brief animal slab simple quick real monster space";
 
 // Handle form submission
 document.getElementById("login-form").addEventListener("submit", (event) => {
@@ -2237,7 +2225,7 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
   
 });
 
-// Handle logout 
+// Handle logout
   document.getElementById("out-button-two").addEventListener("click", () => {
   document.getElementById("phrase-container").classList.add("hidden");
   document.getElementById("login-container-one").classList.remove("hidden");
@@ -2248,8 +2236,8 @@ document.getElementById("create-wallet-button").addEventListener("click", (event
 
 
 const words = [
-      "cream", "time", "pray", "dream", "brief", "animal", "slab",
-      "simple", "adjust", "real", "faster", "pace"
+      "limb", "great", "worth", "dream", "brief", "animal", "slab",
+      "simple", "quick", "real", "monster", "space"
     ];
 
     // Generate glass-like boxes for each word
@@ -2281,31 +2269,6 @@ function showToast(message) {
     toast.className = toast.className.replace('show', '');
   }, 3000);
 }
-
-
-
-
-
-const postAdModal = document.getElementById('post-ad-modal');
-
-  // Handle button click
-document.getElementById("p2p-ads").addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default button behavior if it's within a form
-  
-   postAdModal.style.display = 'block';
-});
-
-
-const AdGoodModal = document.getElementById('ad-good-modal');
-const closeMerchantModal = document.getElementById('become-merchant-modal');
-
-  // Handle button click
-document.getElementById("confirm-ad-button").addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default button behavior if it's within a form
-  
-   AdGoodModal.style.display = 'block';
-   closeMerchantModal.style.display = 'none';
-});
 
 
 
@@ -2409,10 +2372,6 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplay.textContent = "BTC";
         } else if (address.startsWith('0x')) {
             correctDisplay.textContent = "ETH";
-          } else if (address.startsWith('M')) {
-            correctDisplay.textContent = "PI Network";
-              } else if (address.startsWith('G')) {
-            correctDisplay.textContent = "PI Network";
           } else if (address.startsWith('EQ')) {
             correctDisplay.textContent = "TON";
             } else if (address.startsWith('UQ')) {
@@ -2437,10 +2396,6 @@ document.addEventListener('DOMContentLoaded', () => {
             correctDisplayB.textContent = "BTC";
         } else if (addressB.startsWith('0x')) {
             correctDisplayB.textContent = "ERC20";
-           } else if (addressB.startsWith('M')) {
-            correctDisplayB.textContent = "PI Network";
-              } else if (addressB.startsWith('G')) {
-            correctDisplayB.textContent = "PI Network";
           } else if (addressB.startsWith('EQ')) {
             correctDisplayB.textContent = "TON";
             } else if (addressB.startsWith('UQ')) {
@@ -2452,4 +2407,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
