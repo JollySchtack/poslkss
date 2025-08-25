@@ -858,7 +858,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sellname: 'Xion88',
                 status: '0 Orders |  0%',
                 sellstatus: '853 Orders | 83%',
-                buyPrice: '$111,633.53',
+                buyPrice: '$111,987.00',
                 sellPrice: '$108,836.55',
                 quantity: 'Available: 1.08 BTC',
                 sellquantity: 'Available: 6.73 BTC',
@@ -2452,3 +2452,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
