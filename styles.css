@@ -2514,8 +2514,8 @@ footer {
 
 .currency-symbol {
     position: absolute;
-    left: 55px;
-    top: 168px;
+    left: 50px;
+    top: 170px;
     color: white;
     text-align: right;
 }
@@ -3765,3 +3765,4 @@ footer {
   font-size: 14px;
   
 }
+
