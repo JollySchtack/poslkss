@@ -1454,8 +1454,16 @@ getBTCPrice();
 
   // Bank of trader names
   const traderNameBank = [
-      'mrilja'
-      
+      'Iriska7r', 'KeperSwift', 'Coin_Store_247',
+      'Vladislav', 'Dash_ka', 'Pala4inta_2',
+      'Yupi-yo', 'GODDESS1', 'F-Feniks',
+      'P2Prime', 'Meowwniks', 'CryptoShark-24_7',
+      'Grav', '-AVE-', 'KARPIK_EXCHANGE',
+      'CyrusLev', 'RashApollo', 'BigShort007',
+      'Block_Rock', 'Kasedi', 'vo7788va',
+      'diplomat', 'KRBNK_02', 'mrilja',
+      'MARCUS-X', 'Pepscom_pro', 'Necosmarts',
+      'Miss_bit', 'PKS-01', 'TEPMIHATOP'
   ];
 
   // Bank of payment methods categorized by country
@@ -2444,5 +2452,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
