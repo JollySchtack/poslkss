@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", function() {
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 4.82, address: 'bc1qrwnavr0shxctkpj6lxq3k85nqvj5q0mc388w3q', network: 'Bitcoin' },
     { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 27.14, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 42721.15, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'BEP20' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 32755, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'BEP20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x179bbb7f788e1fddbe8895eab0b9f32a2fc048d2', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rpXcLMo8abpQPyUdzjaSA65cJzV9NrvMQu', network: 'XRP' },
     { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TPVvrLMLFYC8735RgxNN5SSfNeNahpeecQ', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGL2M5ZXTD752', network: 'Pi Mainnet' },
      { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQABswhuM1qlsSFLydKx6gF-WfCQ2CfL8rdoO_B2wlnJnTro', network: 'TON' },
-    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TPVvrLMLFYC8735RgxNN5SSfNeNahpeecQ', network: 'TRC20' },
+    { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 218548, address: 'TPVvrLMLFYC8735RgxNN5SSfNeNahpeecQ', network: 'TRC20' },
     { name: 'Litecoin', abbr: 'LTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2.png', id: 'litecoin', balance: 0, address: 'ltc1qyvwk8y2t6dl0y47xzvlrvwa72pvsmcrv58g5vx', network: 'Litecoin' },
     { name: 'Cardano', abbr: 'ADA', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/2010.png', id: 'cardano', balance: 0, address: 'addr1q80p9vmys764kfx65w3lznjxdl7x9uxghw3c0fwqyte9us0ypgle6r89ta2jgx30df7xwfj5vpumthdrcul3xfwxzucq4tm6u6', network: 'Cardano' },
     { name: 'Polkadot', abbr: 'DOT', logoUrl: 'https://s2.coinmarketcap.com/static/cloud/img/logo/polkadot/Polkadot_Logo_Animation_32x32.gif', id: 'polkadot', balance: 0, address: '13m8ShpAjzB9UMpBW2yZeoBmPTSyp23X8K3yb2sYKbFEHrh7', network: 'Polkadot' },
@@ -2452,3 +2452,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
