@@ -1070,10 +1070,10 @@ window.onload = function () {
 <div id="approve-tether-pay" class="modal-b"> 
    <div class="approve-board"> 
      <img src="https://cdn-icons-png.flaticon.com/128/16741/16741218.png" alt="BTC" class="not-icon">
-     <div class="not-text-bold">Large Transfer Detected</div>
-     <div class="not-text">Are you sure you want to transfer USD?</div>
+     <div class="not-text-bold">Insufficient balance</div>
+     <div class="not-text">Your current balance is insufficient for this transaction</div>
     <div class="not-cancel" onclick="document.querySelector('#approve-tether-pay').style.display='none';document.querySelector('#order-summary-popup').style.display='block';">Cancel</div>
-     <div class="not-cancel" onclick="document.querySelector('#approve-tether-pay').style.display='none';document.querySelector('#order-summary-popup').style.display='block';">Transfer</div>
+     
       
     </div>
   </div>
@@ -1294,3 +1294,4 @@ setInterval(fetchPiPrice, 120000);
   
 </body>
 </html>
+
