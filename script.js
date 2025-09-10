@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: 'DAI', abbr: 'DAI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png', id: 'filecoin', balance: 0, address: '0x685f79082b0A9cc258F0EE2c2C000BD0e53a9381', network: 'ERC20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
-    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
+    { name: 'Tron', abbr: 'TRX', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1958.png', id: 'tron', balance: 1, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
     { name: 'Pi', abbr: 'PI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/35697.png', id: 'story-2', balance: 0, address: 'MD5HGPHVL73EBDUD2Z4K2VDRLUBC4FFN7GOBLKPK6OPPXH6TED4TQAAAAGLX3QVOQQRA6', network: 'Pi Mainnet' },
     { name: 'Toncoin', abbr: 'TON', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/11419.png', id: 'the-open-network', balance: 0, address: 'UQA5y47lv9HJQcoWK3W0h7SCEkcQhgbiWJvCCb4xhEcUh815', network: 'TON' },
     { name: 'USDT', abbr: 'USDT', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: 'TBcvDpeMtW9aXxq15nzrGVqxbf85PmUG6R', network: 'TRC20' },
@@ -2453,6 +2453,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
