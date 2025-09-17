@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0.002, address: '0x685f79082b0A9cc258F0EE2c2C000BD0e53a9381', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0x685f79082b0A9cc258F0EE2c2C000BD0e53a9381', network: 'Ethereum' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
+    { name: 'BUSD', abbr: 'BUSD', logoUrl: 'https://s3.coinmarketcap.com/static/img/portraits/62da512ff192d82df80012bb.png', id: 'binance-peg-busd', balance: 0, address: '0x685f79082b0A9cc258F0EE2c2C000BD0e53a9381', network: 'BEP20' },
     { name: 'DAI', abbr: 'DAI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png', id: 'filecoin', balance: 0, address: '0x685f79082b0A9cc258F0EE2c2C000BD0e53a9381', network: 'ERC20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x83fdFd737b057F939B942DF9b10b7262833cCc06', network: 'BEP20' },
     { name: 'XRP', abbr: 'XRP', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/52.png', id: 'ripple', balance: 0, address: 'rsZz9P9t5uFjecedjnKgZwP3WUE1s4HTHR', network: 'XRP' },
@@ -2453,6 +2454,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
