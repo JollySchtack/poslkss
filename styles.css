@@ -10,7 +10,14 @@
 
 
 
-      
+      .bolt{
+        color: white;
+        position: absolute;
+        bottom: 150px;
+        border-radius: 10px;
+        border: 1px dotted white;
+        background: rgba(50, 50, 50, 0.3);
+      }
 
 
      
@@ -3779,4 +3786,5 @@ footer {
   font-size: 14px;
   
 }
+
 
