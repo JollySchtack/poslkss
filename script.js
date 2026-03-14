@@ -2459,9 +2459,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const tg = window.Telegram.WebApp;
-
-tg.ready();
-tg.expand();                 // optional: expand the webapp
-tg.setHeaderColor('#ffffff'); // black header
-tg.setBackgroundColor('#ffffff'); // optional: make background black too
