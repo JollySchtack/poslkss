@@ -211,6 +211,7 @@ textarea.invalid {
   position: absolute;
   bottom: 5%;
   left: 0%;
+  color: #000;
 }
 
 #logout-button {
@@ -236,7 +237,7 @@ textarea.invalid {
 #out-button{
   position: absolute;
   left: 2.5%;
-  top: 3.5%;
+  top: 20px;
   cursor: pointer;
   width: 20px;
 }
@@ -244,7 +245,7 @@ textarea.invalid {
 #out-button img{
   position: absolute;
   left: 2.5%;
-  top: 3.5%;
+  top: 20px;
   cursor: pointer;
   width: 24px;
 }
@@ -339,8 +340,8 @@ textarea.invalid {
     }
 
 .copy-warning{
-  background: rgba(3, 170, 199, 0.3);
-  color: lightblue; 
+  background: rgba(50, 50, 50, 0.4);
+  color: white; 
   border-radius: 10px;
   font-size: 12px;
   padding: 10px 20px;
@@ -784,6 +785,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   position: fixed;
+  left: 30px;
   top: 0%;
   margin-left: 30px;
   padding-right: 230px;
@@ -837,7 +839,7 @@ body {
 .modal-button-top {
   background-color: #FCD535;
   color: black;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   width: 100%;
   border: none;
@@ -2359,14 +2361,14 @@ footer {
   width: 150px;
   position: absolute;
   left: 0px;
-  top: -20px;
+  top: -10px;
 }
 
 .binance-icon-phrase{
   width: 150px;
   position: absolute;
-  left: 30px;
-  top: -20px; 
+  left: 40px;
+  top: -10px; 
 }
 
 .binance-logo-back{
@@ -2379,9 +2381,16 @@ footer {
 
 .binance-icon-two{
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   margin-top: 5px;
   text-align: left; 
+  position: absolute;
+  top: -10px;
+  left: 125px;
+}
+
+#p2p-modal{
+  padding-top: 60px;
 }
 
 .order-terms{
@@ -2524,7 +2533,7 @@ footer {
 .buy-pm-show{
   color: grey;
   font-size: 16px;
-  
+
 }
 
 .payer-column-baby{
@@ -2664,6 +2673,7 @@ footer {
 #p2p-modal .close-button {
   position: absolute;
   left: 3%;
+  top: 20px; 
 }
 
 .close-button-cancel {
@@ -2721,7 +2731,7 @@ footer {
     min-width: 0;
     outline: none;
     overflow: hidden;
-    padding: 12px;
+    padding: 20px;
     width: 100%;
     margin-bottom: 10px;
     margin-top: 10px;
