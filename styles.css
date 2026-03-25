@@ -2357,14 +2357,14 @@ footer {
 .binance-icon{
   width: 150px;
   position: absolute;
-  left: 25px;
+  left: 0px;
   top: -20px;
 }
 
 .binance-icon-phrase{
   width: 150px;
   position: absolute;
-  left: 25px;
+  left: 0px;
   top: -20px; 
 }
 
