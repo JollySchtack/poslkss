@@ -401,58 +401,83 @@ function openModalDirect(crypto) {
 
 
   // Function to display cryptocurrencies
-  async function displayCryptocurrencies() {
-    await fetchPrices();
+  
+ async function displayCryptocurrencies() {
+  const cryptoList = document.getElementById('crypto-list');
+  cryptoList.innerHTML = ''; // Clear previous list
 
-    const cryptoList = document.getElementById('crypto-list');
-    cryptoList.innerHTML = ''; // Clear previous list
-
-    // Sort cryptocurrencies by balance in descending order
-    cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
-
-    let totalBalance = 0;
-
-    cryptocurrencies.forEach(crypto => {
-      const usdEquivalent = crypto.price * crypto.balance;
-      totalBalance += usdEquivalent;
-
-      const listItem = document.createElement('li');
-      listItem.classList.add('crypto-item');
-      listItem.innerHTML = `
-        <div class="crypto-details">
-          <img src="${crypto.logoUrl}" alt="${crypto.name} Logo">
-          <div class="crypto-info">
-            <span class="crypto-name">${crypto.name}</span>
-            <span class="crypto-price">$${crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-          </div>
+  // Show skeleton placeholders while loading
+  for (let i = 0; i < 5; i++) { // 5 placeholder items
+    const skeleton = document.createElement('li');
+    skeleton.classList.add('crypto-skeleton');
+    skeleton.innerHTML = `
+      <div class="crypto-details">
+        <div class="skeleton-logo"></div>
+        <div class="crypto-info">
+          <div class="skeleton-text" style="width: 80px;"></div>
+          <div class="skeleton-text" style="width: 50px;"></div>
         </div>
-        <div class="crypto-balance">
-          <span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-          <br>
-          <span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-        </div>
-      `; 
-     listItem.onclick = () => {
-    document.getElementById('balance-inside').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-    document.getElementById('balance-inside-sendpage').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-       document.getElementById('balance-inside-convert').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-    document.getElementById('usd-inside').innerHTML = `<span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-    document.getElementById('balance-inside-detail').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
-    document.getElementById('modal-title-crypto').innerHTML = `<span>${crypto.abbr}</span>`;
-    document.getElementById('modal-title-crypto-b').innerHTML = `<span>${crypto.abbr}</span>`;
-       document.getElementById('modal-title-crypto-c').innerHTML = `<span>${crypto.abbr}</span>`;
-    document.getElementById('modal-title-sendpage').innerHTML = `<span>${crypto.name}</span>`;
-       document.getElementById('modal-title-convert-page').innerHTML = `<span>${crypto.name}</span>`;
-    document.getElementById('balance-inside-logo').innerHTML = `<img src="${crypto.logoUrl}" Logo">`;
-    openModal(crypto);
-  };
-      cryptoList.appendChild(listItem);
-    });
-
-    document.getElementById('balance').textContent = `$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-
-   
+      </div>
+      <div class="crypto-balance">
+        <div class="skeleton-text" style="width: 60px; margin-bottom: 5px;"></div>
+        <div class="skeleton-text" style="width: 50px;"></div>
+      </div>
+    `;
+    cryptoList.appendChild(skeleton);
   }
+
+  // Fetch actual prices
+  await fetchPrices();
+
+  cryptoList.innerHTML = ''; // Clear skeletons
+
+  // Sort cryptocurrencies by balance in descending order
+  cryptocurrencies.sort((a, b) => (b.price * b.balance) - (a.price * a.balance));
+
+  let totalBalance = 0;
+
+  cryptocurrencies.forEach(crypto => {
+    const usdEquivalent = crypto.price * crypto.balance;
+    totalBalance += usdEquivalent;
+
+    const listItem = document.createElement('li');
+    listItem.classList.add('crypto-item');
+    listItem.innerHTML = `
+      <div class="crypto-details">
+        <img src="${crypto.logoUrl}" alt="${crypto.name} Logo">
+        <div class="crypto-info">
+          <span class="crypto-name">${crypto.name}</span>
+          <span class="crypto-price">$${crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+        </div>
+      </div>
+      <div class="crypto-balance">
+        <span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+        <br>
+        <span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+      </div>
+    `;
+
+    listItem.onclick = () => {
+      document.getElementById('balance-inside').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+      document.getElementById('balance-inside-sendpage').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+      document.getElementById('usd-inside').innerHTML = `<span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+      document.getElementById('balance-inside-detail').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+      document.getElementById('modal-title-crypto').innerHTML = `<span>${crypto.abbr}</span>`;
+      document.getElementById('modal-title-crypto-b').innerHTML = `<span>${crypto.abbr}</span>`;
+      document.getElementById('modal-title-crypto-c').innerHTML = `<span>${crypto.abbr}</span>`;
+      document.getElementById('modal-title-crypto-rec').innerHTML = `<span>${crypto.abbr}</span>`;
+      document.getElementById('modal-title-sendpage').innerHTML = `<span>${crypto.name}</span>`;
+      document.getElementById('modal-title-convert-page').innerHTML = `<span>${crypto.name}</span>`;
+      document.getElementById('balance-inside-logo').innerHTML = `<img src="${crypto.logoUrl}" Logo">`;
+      openModal(crypto);
+    };
+
+    cryptoList.appendChild(listItem);
+  });
+
+  document.getElementById('balance').textContent = `$${totalBalance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
   
 
   // Function to open modal with send and receive options
