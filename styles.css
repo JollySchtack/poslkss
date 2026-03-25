@@ -2355,15 +2355,16 @@ footer {
 }
 
 .binance-icon{
-  width: 90px;
+  width: 150px;
   position: absolute;
-  right: calc(100% - 110px);
+  left: 25px;
+  
 }
 
 .binance-icon-phrase{
-  width: 90px;
+  width: 150px;
   position: absolute;
-  right: calc(100% - 130px);
+  left: 25px;
 }
 
 .binance-logo-back{
@@ -2375,7 +2376,7 @@ footer {
 }
 
 .binance-icon-two{
-  width: 90px;
+  width: 150px;
   margin-bottom: 20px;
   margin-top: 5px;
   text-align: left; 
