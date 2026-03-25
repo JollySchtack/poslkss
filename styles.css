@@ -126,7 +126,7 @@
 #login-button-one {
   padding: 15px 15px;
   font-size: 1rem;
-  background: #03AAC7;
+  background: #FCD535;
   margin-top: 10px;
   border: none;
   border-radius: 50px; 
@@ -202,7 +202,7 @@ textarea.invalid {
 #login-button {
   padding: 15px 15px;
   font-size: 1rem;
-  background: #03AAC7;
+  background: #FCD535;
   border: none;
   border-radius: 50px; 
   cursor: pointer;
@@ -299,7 +299,7 @@ textarea.invalid {
    .continue-button {
       margin-top: 20px;
       font-size: 16px;
-      background: #03AAC7;
+      background: #FCD535;
       width: 95%;
       padding: 15px 20px; 
       color: black;
@@ -820,7 +820,7 @@ body {
 }
 
 .modal-button {
-  background-color: #03AAC7;
+  background-color: #FCD535;
   color: black;
   border: none;
   padding: 10px 20px;
@@ -831,11 +831,11 @@ body {
 }
 
 .modal-button:hover {
-  background-color: #03AAC7;
+  background-color: #FCD535;
 }
 
 .modal-button-top {
-  background-color: #03AAC7;
+  background-color: #FCD535;
   color: black;
   font-weight: bold;
   width: 100%;
@@ -847,7 +847,7 @@ body {
 }
 
 .modal-button-pro {
-  background-color: #03AAC7;
+  background-color: #FCD535;
   color: black;
   border: none;
   padding: 10px 20px;
@@ -857,7 +857,7 @@ body {
 }
 
 .modal-button-pro:hover {
-  background-color: #03AAC7;
+  background-color: #FCD535;
 }
 
 .modal-button-proline {
@@ -1034,15 +1034,15 @@ nav{
     height: 5px;
     border-radius: 5px;
     opacity: 0.9;
-    color: #03AAC7;
+    color: #FCD535;
 }
 
 .crypto-selector button.active-buy::after {
-    background-color: #03AAC7;  /* Green for buy */
+    background-color: #FCD535;  /* Green for buy */
 }
 
 .crypto-selector button.active-sell::after {
-    background-color: #03AAC7; /* Red for sell */
+    background-color: #FCD535; /* Red for sell */
 }
 
 .currency-switch {
@@ -1515,7 +1515,7 @@ close-button-three:hover,
 }
 
 .post-ad-button {
-  background-color: #03AAC7;
+  background-color: #FCD535;
   font-size: 14px;
   color: black;
   width: 100px;
@@ -1530,7 +1530,7 @@ close-button-three:hover,
 }
 
 #confirm-payment {
-    background-color: #03AAC7;
+    background-color: #FCD535;
     color: black;
     border: none;
     font-weight: bold;
@@ -2073,7 +2073,7 @@ footer {
 
 .confirm-button{
   width: 100%;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   padding: 10px;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -2441,7 +2441,7 @@ footer {
 }
 
 .chat-button{
-  background-color: #03AAC7;
+  background-color: #FCD535;
   height: 32px;
   width: 75px;
   border-radius: 10px;
@@ -2591,7 +2591,7 @@ footer {
   width: 45px;
   bottom: 30px;
   right: 30px;
-  background: #03AAC7;
+  background: #FCD535;
   padding: 8px;
   border: none;
   border-radius: 12px;
@@ -2612,7 +2612,7 @@ footer {
 .fiat-picker{
   width: 50px;
   height: 2.5px;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   position: absolute;
   top: 130px;
   left: 104px;
@@ -3106,7 +3106,7 @@ justify-content: space-between;
 
 .express-tab-active {
   color: #fff; 
-  border-bottom: 1px solid #03AAC7;
+  border-bottom: 1px solid #FCD535;
   width: 20%;
   text-align: center;
 }
@@ -3182,7 +3182,7 @@ justify-content: space-between;
 #express-payment-btn {
     width: 100%;
     padding: 12px;
-    background-color: #03AAC7;
+    background-color: #FCD535;
     border: none;
     border-radius: 5px;
     color: #000;
@@ -3194,7 +3194,7 @@ justify-content: space-between;
 .express-payment-preview {
     width: 95%;
     padding: 15px;
-    background-color: #03AAC7;
+    background-color: #FCD535;
     border: none;
     border-radius: 8px;
     color: #000;
@@ -3354,7 +3354,7 @@ justify-content: space-between;
 
 .not-available-place{
   color: black;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   padding: 14px;
   width: 100%;
   border-radius: 5px;
@@ -3366,7 +3366,7 @@ justify-content: space-between;
 
 .not-available-place-b{
   color: black;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   padding: 14px;
   width: 100%;
   border-radius: 5px;
@@ -3518,7 +3518,7 @@ justify-content: space-between;
   position: absolute;
   bottom: 5%;
   left: 0%;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   color: black;
   border: none;
   padding: 15px;
@@ -3767,7 +3767,7 @@ justify-content: space-between;
   height: 50px;
   border-radius: 50px;
   border: none;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   position: absolute;
   bottom: 50px;
   left: ;
@@ -3844,7 +3844,7 @@ justify-content: space-between;
   height: 10px;
   width: 3px;
   border-top-radius: 10px;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   text-align: left;
   margin-right: 10px;
   margin-top: 10px;
@@ -3902,7 +3902,7 @@ justify-content: space-between;
   width: 90%;
   margin: 20px;
   border-radius: 10px;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   position: absolute;
   bottom: 20px;
   left: 0px;
@@ -3915,7 +3915,7 @@ justify-content: space-between;
 }
 
 .connect-aix{
-  color: #03AAC7;
+  color: #FCD535;
   font-size: 14px;
   text align: center;
   margin-top: 5px;
@@ -3940,7 +3940,7 @@ justify-content: space-between;
   position: fixed;
   bottom: 5%;
   left: 0%;
-  background-color: #03AAC7;
+  background-color: #FCD535;
   color: black;
   border: none;
   padding: 15px;
