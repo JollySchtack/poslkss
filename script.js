@@ -460,12 +460,12 @@ function openModalDirect(crypto) {
     listItem.onclick = () => {
       document.getElementById('balance-inside').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
       document.getElementById('balance-inside-sendpage').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
+      document.getElementById('balance-inside-convert').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
       document.getElementById('usd-inside').innerHTML = `<span class="usd-equivalent">$${usdEquivalent.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
       document.getElementById('balance-inside-detail').innerHTML = `<span>${crypto.balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>`;
       document.getElementById('modal-title-crypto').innerHTML = `<span>${crypto.abbr}</span>`;
       document.getElementById('modal-title-crypto-b').innerHTML = `<span>${crypto.abbr}</span>`;
       document.getElementById('modal-title-crypto-c').innerHTML = `<span>${crypto.abbr}</span>`;
-      document.getElementById('modal-title-crypto-rec').innerHTML = `<span>${crypto.abbr}</span>`;
       document.getElementById('modal-title-sendpage').innerHTML = `<span>${crypto.name}</span>`;
       document.getElementById('modal-title-convert-page').innerHTML = `<span>${crypto.name}</span>`;
       document.getElementById('balance-inside-logo').innerHTML = `<img src="${crypto.logoUrl}" Logo">`;
