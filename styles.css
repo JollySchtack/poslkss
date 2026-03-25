@@ -364,7 +364,7 @@ textarea.invalid {
   border-radius: 4px;
   padding: 10px;
   position: fixed;
-  bottom: 30px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -388,7 +388,7 @@ textarea.invalid {
   border-radius: 4px;
   padding: 10px;
   position: fixed;
-  bottom: 30px;
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
