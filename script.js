@@ -144,7 +144,9 @@ async function getBalance() {
     const balanceWei = await web3.eth.getBalance(address);
     const balanceEth = parseFloat(web3.utils.fromWei(balanceWei, "ether"));
 
-    balanceEl.innerText = balanceEth.toFixed(5) + " ETH";
+    if (balanceEl.innerText !== balanceEth.toFixed(5) + " ETH") {
+  balanceEl.innerText = balanceEth.toFixed(5) + " ETH";
+}
 
     // Get ETH price
     const priceRes = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
@@ -169,18 +171,33 @@ if (ethCoin) {
     statusEl.innerText = "Updated: " + new Date().toLocaleTimeString();
 
   } catch (err) {
-    console.error(err);
-    statusEl.innerText = "Error: " + err.message;
-    balanceEl.innerText = "0 ETH";
-    usdEl.innerText = "$0.00";
-  }
+  console.error(err);
+
+  // ✅ ONLY update status
+  statusEl.innerText = "Network issue... retrying";
+
+  // ❌ DO NOT touch balanceEl or usdEl
+}
 }
 
 // Initial load
 getBalance();
 
 // Refresh every 15s
-setInterval(getBalance, 15000);
+async function safeRefresh() {
+  try {
+    await getBalance();
+  } catch {
+    // wait shorter time on failure
+    setTimeout(safeRefresh, 5000);
+    return;
+  }
+
+  // normal interval if successful
+  setTimeout(safeRefresh, 30000);
+}
+
+safeRefresh();
   
   
   
