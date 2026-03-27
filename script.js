@@ -2480,6 +2480,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
