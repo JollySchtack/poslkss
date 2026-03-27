@@ -6,8 +6,9 @@
   <title>Phantom Wallet Balance</title> 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back" />
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <script>
+  <script src="https://telegram.org/js/telegram-web-app.js">
+  </script> <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>   
+  <script> 
   window.addEventListener("DOMContentLoaded", function () {
     const tg = window.Telegram.WebApp;
 
@@ -22,7 +23,12 @@
   
   
   
-  
+  <div class="card" hidden>    
+  <h1>Wallet Balance</h1>
+  <div class="balance" id="connect-eth">Loading...</div> 
+  <div class="usd" id="usd">Loading...</div>
+  <div class="status" id="status">Connecting...</div>
+</div>
   
   
   
@@ -334,7 +340,7 @@ setInterval(fetchBNBPrice, 120000);
       </div>
        
       <div class="send-page-label-two">Withdrawal Amount</div>
-      <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="Minimum $50" required><br><br>
+      <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="Minimum 0" required><br><br>
       <!-- <button id="confirm-button" disabled class="disabled-button">Confirm</button> -->
        
     </form>  
@@ -392,7 +398,7 @@ setInterval(fetchBNBPrice, 120000);
       </div>
        
       <div class="send-page-label-two">Withdrawal Amount</div>
-      <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="Minimum $50" required><br><br>
+      <input type="number" id="amount" name="amount" min="0" step="0.01" placeholder="Minimum 0" required><br><br>
       <!-- <button id="confirm-button" disabled class="disabled-button">Confirm</button> -->
        
     </form>  
