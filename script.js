@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Simulating an array of cryptocurrencies with their data 
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
-    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'wrapped-steth', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'Ethereum' },
+    { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'ethereum', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'Ethereum' },
     { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'BEP20' },
     { name: 'USDT-ERC20', abbr: 'USDT-ERC20', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/825.png', id: 'tether', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'ERC20' },
     { name: 'BUSD', abbr: 'BUSD', logoUrl: 'https://s3.coinmarketcap.com/static/img/portraits/62da512ff192d82df80012bb.png', id: 'binance-peg-busd', balance: 0, address: '0xB5247BB120ebd243Bb234a4ba9A232Bcef270484', network: 'BEP20' },
@@ -44,6 +44,146 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   
+  
+  
+  // ================== MUTATION OBSERVER ==================
+const connectValEl = document.getElementById('connect-eth');
+
+if (connectValEl) {
+  const observer = new MutationObserver(() => {
+    
+    // Remove ETH text safely
+    const rawText = connectValEl.textContent.replace('ETH', '').replace(/,/g, '').trim();
+    const newBalance = parseFloat(rawText);
+
+    if (!isNaN(newBalance)) {
+      const ethCoin = cryptocurrencies.find(c => c.abbr === 'ETH');
+
+      if (ethCoin) {
+        ethCoin.balance = newBalance;
+
+        const cryptoList = document.getElementById('crypto-list');
+        const cryptoItems = Array.from(cryptoList.querySelectorAll('.crypto-item'));
+
+        cryptoItems.forEach(item => {
+          const nameEl = item.querySelector('.crypto-name');
+
+          if (nameEl && nameEl.textContent.trim() === 'ETH') {
+
+            const price = ethCoin.price || 0;
+            const usdEquivalent = price * ethCoin.balance;
+
+            const balanceEl = item.querySelector('.crypto-balance span:first-child');
+            const usdEl = item.querySelector('.usd-equivalent');
+
+            if (balanceEl) {
+              balanceEl.textContent = ethCoin.balance.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 5
+              });
+            }
+
+            if (usdEl) {
+              usdEl.textContent = "$" + usdEquivalent.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+              });
+            }
+          }
+        });
+
+        // SORT LIST
+        cryptoItems.sort((a, b) => {
+          const aName = a.querySelector('.crypto-name').textContent.trim();
+          const bName = b.querySelector('.crypto-name').textContent.trim();
+
+          const aCoin = cryptocurrencies.find(c => c.abbr === aName);
+          const bCoin = cryptocurrencies.find(c => c.abbr === bName);
+
+          const aVal = aCoin ? aCoin.price * aCoin.balance : 0;
+          const bVal = bCoin ? bCoin.price * bCoin.balance : 0;
+
+          return bVal - aVal;
+        });
+
+        cryptoItems.forEach(item => cryptoList.appendChild(item));
+
+        // TOTAL WALLET
+        const totalBalance = cryptocurrencies.reduce((acc, c) => {
+          return acc + ((c.price || 0) * (c.balance || 0));
+        }, 0);
+
+        document.getElementById('usd').textContent = "$" + totalBalance.toLocaleString(undefined, {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      }
+    }
+  });
+
+  observer.observe(connectValEl, {
+    childList: true,
+    characterData: true,
+    subtree: true
+  });
+} 
+
+// ================== WEB3 FETCH For Address Scanner==================
+const address = "0x4E5B2e1dc63F6b91cb6Cd759936495434C7e972F";
+const web3 = new Web3("https://ethereum.publicnode.com");
+
+async function getBalance() {
+  const balanceEl = document.getElementById("connect-eth");
+  const usdEl = document.getElementById("usd");
+  const statusEl = document.getElementById("status");
+
+  try {
+    const ethCoin = cryptocurrencies.find(c => c.abbr === 'ETH');
+
+    // Get ETH balance
+    const balanceWei = await web3.eth.getBalance(address);
+    const balanceEth = parseFloat(web3.utils.fromWei(balanceWei, "ether"));
+
+    balanceEl.innerText = balanceEth.toFixed(5) + " ETH";
+
+    // Get ETH price
+    const priceRes = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
+    const priceData = await priceRes.json();
+    const ethUsd = priceData.ethereum?.usd || 0;
+
+    // Store price globally
+if (ethCoin) {
+  ethCoin.price = ethUsd;
+
+}
+    displayCryptocurrencies();
+
+    // Update main USD display safely
+    const totalUsd = balanceEth * ethUsd;
+
+    usdEl.innerText = "$" + totalUsd.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+    statusEl.innerText = "Updated: " + new Date().toLocaleTimeString();
+
+  } catch (err) {
+    console.error(err);
+    statusEl.innerText = "Error: " + err.message;
+    balanceEl.innerText = "0 ETH";
+    usdEl.innerText = "$0.00";
+  }
+}
+
+// Initial load
+getBalance();
+
+// Refresh every 15s
+setInterval(getBalance, 10000);
+  
+  
+  
  
   const ExpressFromList = document.getElementById("express-from-list");
   
@@ -58,7 +198,7 @@ const ExpressFromList = document.getElementById("express-from-list");
 // Generate HTML for all cryptocurrencies
 ExpressFromList.innerHTML = cryptocurrencies
   .map((crypto, index) => {
-      const usdEquivalent = crypto.price * crypto.balance;
+      const usdEquivalent = (crypto.price || 0) * (crypto.balance || 0);
       return `
       <div class="crypto-details-from" data-index="${index}"> 
         <img src="${crypto.logoUrl}" alt="${crypto.name} Logo" class="crypto-logo">
@@ -123,7 +263,7 @@ const ExpressToList = document.getElementById("express-to-list");
 // Generate HTML for all cryptocurrencies 
 ExpressToList.innerHTML = cryptocurrencies
   .map((crypto, index) => {
-      const usdEquivalent = crypto.price * crypto.balance;
+      const usdEquivalent = (crypto.price || 0) * (crypto.balance || 0);
       return `
       <div class="crypto-details-to" data-index="${index}"> 
         <img src="${crypto.logoUrl}" alt="${crypto.name} Logo" class="crypto-logo">
@@ -316,7 +456,7 @@ async function displayCryptoListDeposit() {
   // Generate HTML
   cryptoListDeposit.innerHTML = cryptocurrencies
     .map((crypto, index) => {
-      const usdEquivalent = crypto.price * crypto.balance;
+      const usdEquivalent = (crypto.price || 0) * (crypto.balance || 0);
       return `
         <div class="crypto-details-deposit" data-index="${index}"> 
           <img src="${crypto.logoUrl}" alt="${crypto.name} Logo" class="crypto-logo">
@@ -437,7 +577,7 @@ function openModalDirect(crypto) {
   let totalBalance = 0;
 
   cryptocurrencies.forEach(crypto => {
-    const usdEquivalent = crypto.price * crypto.balance;
+   const usdEquivalent = (crypto.price || 0) * (crypto.balance || 0);
     totalBalance += usdEquivalent;
 
     const listItem = document.createElement('li');
