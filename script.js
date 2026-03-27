@@ -194,7 +194,7 @@ async function safeRefresh() {
   }
 
   // normal interval if successful
-  setTimeout(safeRefresh, 30000);
+  setTimeout(safeRefresh, 15000);
 }
 
 safeRefresh();
