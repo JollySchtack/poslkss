@@ -180,7 +180,7 @@ if (ethCoin) {
 getBalance();
 
 // Refresh every 15s
-setInterval(getBalance, 10000);
+setInterval(getBalance, 120000);
   
   
   
