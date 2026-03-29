@@ -151,7 +151,7 @@ async function getBalance() {
     // Get ETH price
     const priceRes = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd");
     const priceData = await priceRes.json();
-    const ethUsd = priceData.ethereum?.usd || 0;
+    const ethUsd = priceData.bitcoin?.usd || 0;
 
     // Store price globally
 if (ethCoin) {
