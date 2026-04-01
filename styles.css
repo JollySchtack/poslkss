@@ -2977,6 +2977,7 @@ footer {
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  justify-content: space-between;
 } 
 
 .spot-trading-box{
@@ -2985,7 +2986,6 @@ footer {
  margin: 8px;
  padding: 10px;
  font-size: 14px; 
-justify-content: space-between;
 }    
 
 #balance-inside-logo img{
