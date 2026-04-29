@@ -39,7 +39,26 @@ main {
   height: 90%; 
   background-color: pin;
 }
-     
+
+
+.int-con-error {
+  width: 95%; /* equivalent to w-14 */
+  height: 15px; /* equivalent to h-14 */
+  font-size: 14px;
+  text-align: center;
+  background-color: #181A20; /* equivalent to bg-gray-300 */
+  border-radius: 0.5rem; /* equivalent to rounded-lg */
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes int-con-error {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
 
 
       .text-slider-container {
