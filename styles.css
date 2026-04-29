@@ -16,8 +16,10 @@
   background-color: gree;
   width: 100%; 
   padding: 15px 0px;
-  padding-left: 80px;
+  padding-left: 50px;
   text-align: left;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
 }
   
 .top-bar-verif{
