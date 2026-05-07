@@ -715,12 +715,29 @@ function showBread(message) {
   
   
 
-  // Function to open P2P modal
   function openP2PModal() {
+  const modal = document.getElementById('p2p-modal');
+
+  console.log(modal);
+
+  modal.style.display = 'block';
+}
+   
+  
+  // Function to close P2P modal
+  function closeP2PModal() {
     const modal = document.getElementById('p2p-modal');
-    modal.style.display = 'block';
+    modal.style.display = 'none';
   }
   
+  // Add event listener to P2P button
+  document.getElementById('p2p-button').onclick = openP2PModal;
+
+  // Add event listener to P2P modal close button
+  document.querySelector('#p2p-modal .close-button').onclick = closeP2PModal;
+});
+
+
   const BecomeMerchantModal = document.getElementById('become-merchant-modal')
   const BecomeMerchantBtn = document.getElementById('become-merchant-btn')
   
@@ -732,18 +749,9 @@ function showBread(message) {
   
   
 
-  // Function to close P2P modal
-  function closeP2PModal() {
-    const modal = document.getElementById('p2p-modal');
-    modal.style.display = 'none';
-  }
+  
 
-  // Add event listener to P2P button
-  document.getElementById('p2p-button').onclick = openP2PModal;
 
-  // Add event listener to P2P modal close button
-  document.querySelector('#p2p-modal .close-button').onclick = closeP2PModal;
-});
 
 
 
@@ -1950,7 +1958,7 @@ updateTradersForFiat('USD');
     orderSummaryCloseButton.addEventListener('click', () => {
         orderSummaryPopup.classList.remove('visible');
     });
-  
+   
   
   
   
