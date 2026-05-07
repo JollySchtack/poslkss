@@ -2446,8 +2446,7 @@ footer {
 
 #p2p-modal{
   padding-top: 60px;
-  background-color: pink;
-  border: 1px solid yellow;
+  
 }
 
 .order-terms{
@@ -4147,5 +4146,4 @@ button, a, input, div[role="button"] {
 div[role="button"] {
   cursor: pointer;
 }
-
 
