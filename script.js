@@ -2257,8 +2257,27 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "PLN (BLIK)", logo: "https://cdn-icons-png.flaticon.com/128/10455/10455333.png" },
         { name: "USD (PayPal)", logo: "https://cdn-icons-png.flaticon.com/128/1377/1377239.png" },
         { name: "PLN (Bank Transfer)", logo: "https://cdn-icons-png.flaticon.com/128/10542/10542001.png" },
-        { name: "USD (Skrill)", logo: "https://cdn-icons-png.flaticon.com/128/14083/14083021.png" },
+        { name: "USD (Skrill)", logo: "https://cdn-icons-png.flaticon.com/128/14083/14083021.png" }, 
         { name: "USD (Monzo)", logo: "https://cdn-icons-png.flaticon.com/128/3665/3665975.png" },
+        { name: "EUR", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
+        { name: "GBP", logo: "https://cdn-icons-png.flaticon.com/128/10593/10593703.png" },
+        { name: "BRL", logo: "https://cdn-icons-png.flaticon.com/128/15318/15318300.png" },
+        { name: "TRY", logo: "https://cdn-icons-png.flaticon.com/128/16858/16858907.png" },
+        { name: "JPY", logo: "https://cdn-icons-png.flaticon.com/128/11197/11197819.png" },
+        { name: "KRW", logo: "https://cdn-icons-png.flaticon.com/128/12158/12158817.png" },
+        { name: "INR", logo: "https://cdn-icons-png.flaticon.com/128/14913/14913566.png" },
+        { name: "IDR", logo: "https://cdn-icons-png.flaticon.com/128/16858/16858941.png" },
+        { name: "VND", logo: "https://cdn-icons-png.flaticon.com/128/11197/11197884.png" },
+        { name: "RUB", logo: "https://cdn-icons-png.flaticon.com/128/11197/11197799.png" },
+        { name: "UAH", logo: "https://cdn-icons-png.flaticon.com/128/11197/11197826.png" },
+        { name: "PLN", logo: "https://cdn-icons-png.flaticon.com/128/16858/16858962.png" },
+        { name: "CHF", logo: "https://cdn-icons-png.flaticon.com/128/17183/17183376.png" },
+        { name: "CAD", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
+        { name: "AUD", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
+        { name: "NZD", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
+        { name: "ZAR", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
+        { name: "NGN", logo: "https://cdn-icons-png.flaticon.com/128/11197/11197795.png" },
+        { name: "GHS", logo: "https://cdn-icons-png.flaticon.com/128/15525/15525561.png" },
     ];
   
   function populateDropdownFiat(button, image, span) {
@@ -2499,6 +2518,19 @@ document.getElementById("confirm-ad-button").addEventListener("click", (event) =
    closeMerchantModal.style.display = 'none';
 });
 
+
+
+ 
+const AdGoodModalB = document.getElementById('ad-good-modal');
+const closeMerchantModalB = document.getElementById('become-merchant-modal');
+
+  // Handle button click
+document.getElementById("add-button-button").addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent default button behavior if it's within a form
+  
+   AdGoodModalB.style.display = 'block';
+   closeMerchantModalB.style.display = 'none';
+});
 
 
 
