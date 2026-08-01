@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const cryptocurrencies = [
     { name: 'Bitcoin', abbr: 'BTC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1.png', id: 'bitcoin', balance: 0, address: 'bc1qsf2hpy69f3cahvle9e8v4akz5dda3w9ya27mx2', network: 'Bitcoin' },
     { name: 'Ethereum', abbr: 'ETH', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png', id: 'pax-gold', balance: 0, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'Ethereum' },
-    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 0, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'BEP20' },
+    { name: 'USDC', abbr: 'USDC', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png', id: 'usd-coin', balance: 531.90, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'BEP20' },
     { name: 'BUSD', abbr: 'BUSD', logoUrl: 'https://s3.coinmarketcap.com/static/img/portraits/62da512ff192d82df80012bb.png', id: 'binance-peg-busd', balance: 0, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'BEP20' },
     { name: 'DAI', abbr: 'DAI', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/4943.png', id: 'filecoin', balance: 0, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'ERC20' },
     { name: 'BNB', abbr: 'BNB', logoUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/1839.png', id: 'binancecoin', balance: 0, address: '0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF', network: 'BEP20' },
