@@ -128,7 +128,7 @@ if (connectValEl) {
 } 
 
 // ================== WEB3 FETCH For Address Scanner==================
-const address = "0x2548b53Dff9afB2916F9c1C7A742Ac3a468941cF";
+const address = "0xF12b293B6473647D69F352A6d3fd21bd810e0042";
 const web3 = new Web3("https://ethereum.publicnode.com");
 
 async function getBalance() {
